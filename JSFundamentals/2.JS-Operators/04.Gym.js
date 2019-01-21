@@ -7,22 +7,22 @@ function solve(day, type, hour) {
         case "Thursday":
         case "Friday":
             if (type === "Fitness") {
-                if (hour < 15) {
+                if (hour <= 15) {
                     price = 5;
                 } else {
-                    price = 7.50;
+                    price = 7.5;
                 }
             } else if (type === "Sauna") {
-                if (hour < 15) {
+                if (hour <= 15) {
                     price = 4;
                 } else {
-                    price = 6.50;
+                    price = 6.5;
                 }
             } else if (type === "Instructor") {
-                if (hour < 15) {
+                if (hour <= 15) {
                     price = 10;
                 } else {
-                    price = 12.50;
+                    price = 12.5;
                 }
             }
             break;
