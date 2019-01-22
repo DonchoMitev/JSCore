@@ -1,7 +1,7 @@
 function solve(fruit, kg, lv) {
-    let weight = +((kg/1000).toFixed(2));
+    let weight = +kg/1000;
     let money = +((lv*weight).toFixed(2));
-    console.log(`I need ${money} leva to buy ${weight} kilograms ${fruit}.`);
+    console.log(`I need ${money.toFixed(2)} leva to buy ${weight.toFixed(2)} kilograms ${fruit}.`);
 }
 
-solve('apple', 1, 2.35);
+solve('orange', 2500, 1.80);
