@@ -23,18 +23,18 @@ function solve() {
 
         if (parent.id === 'player1Div') {
             spans[0].textContent = card.name;
-        } else if(parent.id === "player2Div") {
+        } else if (parent.id === "player2Div") {
             spans[2].textContent = card.name;
         }
 
-        if(leftSpan.textContent && rightSpan.textContent) {
+        if (leftSpan.textContent && rightSpan.textContent) {
             let winner;
             let looser;
 
-            if(+leftSpan.textContent > +rightSpan.textContent) {
+            if (+leftSpan.textContent > +rightSpan.textContent) {
                 winner = document.querySelector(`#player1Div img[name='${leftSpan.textContent}']`);
                 looser = document.querySelector(`#player2Div img[name='${rightSpan.textContent}']`);
-            }else {
+            } else {
                 looser = document.querySelector(`#player1Div img[name='${leftSpan.textContent}']`);
                 winner = document.querySelector(`#player2Div img[name='${rightSpan.textContent}']`);
             }
@@ -42,14 +42,14 @@ function solve() {
             winner.style.border = '2px solid green';
             looser.style.border = '2px solid darkred';
 
-            document.getElementById('history').textContent += `[${leftSpan.textContent} vs ${rightSpan.textContent}]`;
-            
-            setTimeout(() => {
-                leftSpan.textContent = "";
-                rightSpan.textContent = "";
-            }, 2000);
+            document.getElementById('history').textContent += `[${leftSpan.textContent} vs ${rightSpan.textContent}] `;
+
+
+            leftSpan.textContent = "";
+            rightSpan.textContent = "";
+
         }
-        
+
 
     }
 }
