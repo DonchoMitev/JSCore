@@ -6,7 +6,7 @@ function solve() {
 	let createContentValue = createContentElement.value;
 
 	if (createTitleValue && createContentValue) {
-		console.log("Hello");
+		//console.log("Hello");
 		let titleElment = document.createElement('h3');
 		let contentElement = document.createElement('p');
 
