@@ -22,7 +22,7 @@ function solve() {
 				
 			}
 			button.disabled = true;
-			document.getElementsByTagName('input')[0].setAttribute('disabled', 'true');
+			numbers.disabled = true;
 		}
 		
 	}
