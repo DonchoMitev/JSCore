@@ -5,11 +5,13 @@ function solve() {
     });
 
     function event (ev) {
+
         let btn = ev.target;
         let number = document.querySelector('#exercise input');
-        if (number == '') {
-            number = 0;
+        if (number.value == '') {
+            number.value = 0;
         }
+
         let output = document.querySelector('#exercise p');
 
         if (btn.textContent == "Chop") {
@@ -23,7 +25,6 @@ function solve() {
         }else if (btn.textContent == "Fillet") {
             output.textContent = +number.value * 0.80;
         }
-
-        number.value = +output.textContent;
+        number.value = output.textContent;
     }
 }
