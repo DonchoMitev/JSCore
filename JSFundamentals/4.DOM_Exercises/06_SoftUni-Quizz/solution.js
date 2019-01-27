@@ -11,7 +11,6 @@ function solve() {
 	let thirdAnsewr = document.getElementsByName('softUniFounder');
 	let rightAnswer = 0;
 
-	sections[0].style.display = 'block';
 
 	function firstEvent() {
 
