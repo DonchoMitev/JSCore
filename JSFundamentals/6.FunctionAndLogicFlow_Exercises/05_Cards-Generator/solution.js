@@ -25,7 +25,6 @@ function solve() {
         }
     }
 
-
     function check(selectItem) {
         var checkedValue = selectItem.options[selectItem.selectedIndex].value;
         console.log(strUser);
