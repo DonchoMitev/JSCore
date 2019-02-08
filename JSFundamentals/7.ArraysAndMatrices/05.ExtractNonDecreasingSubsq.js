@@ -3,7 +3,7 @@ function solve (arr) {
     let newArr = [element];
     for (let i = 0; i < arr.length; i++) {
         
-        if (element < arr[i + 1]) {
+        if (element <= arr[i + 1]) {
             element = arr[i + 1];
             newArr.push(element);
         } 
