@@ -44,6 +44,6 @@ function solve() {
     }
 
     function summaryFunc () {
-        summary.children[1].textContent = `${sum} leva, ${fans} fans`;
+        summary.children[1].textContent = `${sum} leva, ${fans} fans.`;
     }
 }

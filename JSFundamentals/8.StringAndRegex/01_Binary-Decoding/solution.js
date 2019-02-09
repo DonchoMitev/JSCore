@@ -1,15 +1,25 @@
 function solve() {
+  let inputElement = document.getElementById('str');
+  let outputElement = document.getElementById('output');
 
-    let input = document.getElementById('str').value;
-    let result = document.getElementById('result').value;
+  let oneSum = findsOnesSum(inputElement.value);
+  let end = inputElement.value.length - oneSum;
 
-    let sum = 0;
+  let result = inputElement.value.slice(oneSum, end)
 
-    input.split('').forEach(el => {
-        sum += +el;
-    });
+  function findsOnesSum() {
+    let result = value;
 
-    sum = sum.split('').forEach(el => sum += +el)
+    while(result.length > 1) {
+      let temp = result
+          .split('')
+          .reduce((a,b) => +a + +b)
+          .toString();
 
-    console.log(sum)
+      result = temp;
+    }
+
+    return result;
+  }
+   
 }
