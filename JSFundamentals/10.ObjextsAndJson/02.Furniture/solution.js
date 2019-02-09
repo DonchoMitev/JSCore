@@ -53,9 +53,7 @@ function solve() {
       let textarea = document.getElementsByTagName('textarea')[1];
       textarea.value += `Bought furniture: ${furList.join(', ')}\n`;
       textarea.value += `Total price: ${totalPrice.toFixed(2)}\n`;
-      console.log(defFactors);
       textarea.value += `Average decoration factor: ${defFactors.reduce((a,b) => a + b) / defFactors.length}` 
-      console.log(defFactors.reduce((a,b) => a + b) / defFactors.length);
   })
 
 }
