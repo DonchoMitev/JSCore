@@ -38,7 +38,24 @@
             event.preventDefault()
         });
         function addStudents() {
-            // TODO
+            let students = document.getElementById('input').value.split('\n');
+
+            let result = students.filter(x => x != '').map(line => {
+                let currentStudent = line.split(' ');
+                return {
+                    firstName : currentStudent[0],
+                    lastName : currentStudent[1],
+                    grade :parseFloat(currentStudent[2])
+                }
+            });
+
+            let resultString = '';
+            let resultElement = document.getElementById('result');
+            resultString += result.map(s => `${s.firstName} ${s.lastName}`).join(', ');
+            resultString += '\n';
+            resultString += result.map(s => s.grade).reduce((a, b) => a + b) / result.length;
+            resultElement.value = resultString;
+            
         }
     </script>
 </body>
