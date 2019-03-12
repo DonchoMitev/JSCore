@@ -14,7 +14,4 @@ function addItem() {
         $('#newItemText').val('');
         $('#newItemValue').val('');
     }
-
-
-    console.log(text, value);
 }
